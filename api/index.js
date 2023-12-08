@@ -59,10 +59,10 @@ run().catch(console.dir);
 
 
 app.all('/*', function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "https://project-part-4-final-release-frontend.vercel.app");
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+ res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Content-Type', 'text/html');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+  res.header('Content-Type', 'application/json');
   res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
   next();
 });
